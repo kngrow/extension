@@ -1,9 +1,9 @@
 {
   "name" :"MynewPage",
-  "version" : "0.1",
+  "version" : "0.2",
   "manifest_version" : 2,
-  "description" : "新しい",
+  "description" : "ワイの新しいタブ",
   "chrome_url_overrides": {
-	    "newtab": "options.html"
+	    "newtab": "mytabs.html"
 	  }
 }
