@@ -1,16 +1,12 @@
 {
-  "name" :"page",
-  "version" : "0.1",
+  "name" :"MynewPage",
+  "version" : "0.2",
   "manifest_version" : 2,
-  "description" : "dotinstallという背景色をかえる",
   "permissions" : [
-  "tabs" , "http://*/*"
+    "management"
   ],
-  "background" : {
-  	"scripts" : ["myscript.js"]
-  },
-  "page_action" : {
-  	"default_icon" : "text.png",
-  	"default_title" : "page_ext"
-  }
+  "description" : "ワイの新しいタブ",
+  "chrome_url_overrides": {
+	    "newtab": "mytabs.html"
+	  }
 }
