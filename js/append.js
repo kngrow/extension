@@ -25,11 +25,18 @@ $(function(){
 
   chrome.management.getAll(function(data){
       console.log(data);
-      debugger;
+      // debugger;
+      var app_temp = _.template($("#app").html());
     for (var i = 0; i < data.length; i++) {
       if(data[i].type == "package_app" || data[i].type == "hosted_app" || data[i].type == "legacy_packaged_app"){
       console.log(data[i]);
-       $("#app_list").append("<p><a href='"   +data[i].appLaunchUrl + "'>" + "<img src='"+ data[i].icons[0].url + "' width='32' height='32' '>"  + "</a></p>");
+      var iconnum = data[i].icons.length - 1;
+      var app = {
+        "name" : data[i].name,
+        "url" : data[i].appLaunchUrl,
+        "icon_url" : data[i].icons[iconnum].url
+      };
+       $("#app_list").append("<p><a href='"   +data[i].appLaunchUrl + "'>" + "<img src='"+ data[i].icons[0].url + "width='32' height='' '>"  + "</a></p>");
        $("#app_list").append();
       console.log(data[i].appLaunchUrl);
 
