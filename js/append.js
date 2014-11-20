@@ -1,4 +1,11 @@
 $(function(){
+
+$("#app_list").children().children("a").on('click',function(evt){
+    var url = $(evt.target).parent().attr("href");
+});
+
+
+
   const LEFT_CLICK = 0;
   const CENTER_CLICK = 1;
   document.addEventListener('click',function(evt){
@@ -24,12 +31,11 @@ $(function(){
         },false);
 
         chrome.management.getAll(function(data){
-          console.log(data);
-          // debugger;
+
           var app_temp = _.template($("#app").html());
           for (var i = 0; i < data.length; i++) {
             if(data[i].type == "package_app" || data[i].type == "hosted_app" || data[i].type == "legacy_packaged_app"){
-              console.log(data[i]);
+              // console.log(data[i]);
               var iconnum = data[i].icons.length - 1;
               var app = {
                 "name" : data[i].name,
@@ -38,7 +44,6 @@ $(function(){
               };
               debugger;
                $("#app_list").append(app_temp(app));
-              console.log(app_temp(app));
 
             }
 
