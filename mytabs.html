@@ -6,12 +6,13 @@
 	<link rel="stylesheet" href="css/screen.css">
 </head>
 <body>
-	<h1>choose your color</h1>
-	今日の天気
+	<h1>完成おめでとう <a href="http://lol-name-db.herokuapp.com">こ</a></h1>
+	<div class="links">
 	<a href="http://localhost:8000">localhost:8000</a><br>
 	<a href="http://localhost">localhost</a><br>
 	<a href="http://localhost/phpMyAdmin">phpMyadmin</a><br>
-
+	<a href="data:text/html, <html contenteditable>">めも</a><br>
+</div>
 
 	<div id="app_list"></div>
 	<script type="text/javascript" src="js/underscore-min.js"></script>
@@ -20,7 +21,7 @@
 
 	<script type="text/template" id="app">
 		<p>
-			<a href="<%- url %>" target="_blank"><img src="<%- icon_url %>" alt="<%- name %>" width="32" height="32"/></a>
+			<a href="<%- url %>" target="_blank"><img src="<%- icon_url %>" alt="<%- name %>" width="128" height="128"/></a>
 				<span id="name"><%- name %></span>
 		</p>
 	</script>

@@ -51,3 +51,5 @@ $("#app_list").children().children("a").on('click',function(evt){
         });
 
       });
+
+      
